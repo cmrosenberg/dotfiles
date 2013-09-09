@@ -61,6 +61,11 @@ set autoread
 " Until I come up with some genius (ie. stupid) ways of using these...
 set nomodeline
 
+" I have only experienced the problem solved by this when explicitly setting
+" backspace=0 or backspace=1, but to ensure I always get the expected behavoir
+" I'm setting it here
+set backspace=indent,eol,start
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       AESTHETICS
