@@ -127,7 +127,7 @@ endif
 " (ii) Set type of visualbell to no type - ie. disable all bells completely.
 set visualbell t_vb=
 
-compiled with +cmdline_info:
+" If compiled with +cmdline_info:
 " Make vim print the command I'm currently typing in
 if exists("&showcmd")
     set showcmd
