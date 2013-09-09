@@ -158,6 +158,10 @@ set showmatch
 " ... but only do so for three tenths of a second
 set matchtime=3
 
+" I want to be able to use Ctrl-A and Ctrl-X on numbers like 0017 without
+" having the numbers treated as octal.
+set nrformats -=octal
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       EXTENSIONS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
