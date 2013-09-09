@@ -153,6 +153,11 @@ endif
 " If vim prints an error message, don't immediately close it.
 set debug=msg
 
+" When inserting a closing paren, briefly jump to the matching open paren
+set showmatch
+" ... but only do so for three tenths of a second
+set matchtime=3
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       EXTENSIONS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
