@@ -119,6 +119,9 @@ set showmode
 " Padd the cursor with some lines to give the current line context
 set scrolloff=3
 
+" Insert a single space after a '.', '?' and 'I' when joining lines
+set nojoinspaces
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       USABILITY
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
