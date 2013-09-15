@@ -1,6 +1,6 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                    PATHOGEN 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                    PATHOGEN
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Load the pathogen plugin system if this is installed.
 
 "Read ex commands from the file, and source these commands, that is, include
@@ -16,15 +16,15 @@ if exists("g:loaded_pathogen")
     call pathogen#infect()
 endif
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                    GENERAL OPTIONS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Disable (strict) vi compatibility. 
+" Disable (strict) vi compatibility.
 set nocompatible
 
-" (i) Detect filetype  
-" (ii) use detected filetype to inform behaviour of plugins and indentation 
+" (i) Detect filetype
+" (ii) use detected filetype to inform behaviour of plugins and indentation
 filetype plugin indent on
 
 "If Vim is compiled with multibyte character support (e.g. utf-8):
@@ -67,14 +67,16 @@ set nomodeline
 set backspace=indent,eol,start
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       AESTHETICS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" If the feature is available, enable a colored line on column 80 so overtly
-" long lines can more easily be avoided. Availablie if vim version >= 7.3.
+" If the feature is available,mark any line that exceeds 80 columns with a red
+" strikethrough on the 81st column. Kudos to Damian Conway for this. 
+" Availablie if vim version >= 7.3.
 if exists("&colorcolumn")
-    set colorcolumn=80
+    highlight ColorColumn ctermbg=red
+    call matchadd('ColorColumn', '\%81v', 100)
 endif
 
 
@@ -166,9 +168,9 @@ set matchtime=3
 " having the numbers treated as octal.
 set nrformats -=octal
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       EXTENSIONS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Extend this setup with local configurations (colorscheme etc)
 if filereadable(expand("~/.vimrc.local"))
