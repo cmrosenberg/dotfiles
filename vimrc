@@ -86,7 +86,7 @@ endif
 " screen. 
 if exists("&list")
     set list
-    set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:•,nbsp:.
+    set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:•,nbsp:+
 endif
 
 " Convert tabs into spaces
