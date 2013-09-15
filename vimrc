@@ -83,7 +83,7 @@ endif
 " screen. 
 if exists("&list")
     set list
-    set listchars=tab:▸\ ,extends:❯,precedes:❮
+    set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:•,nbsp:.
 endif
 
 " Convert tabs into spaces
@@ -118,6 +118,9 @@ set showmode
 
 " Padd the cursor with some lines to give the current line context
 set scrolloff=3
+
+" Insert a single space after a '.', '?' and 'I' when joining lines
+set nojoinspaces
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       USABILITY
