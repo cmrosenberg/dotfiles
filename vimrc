@@ -129,9 +129,21 @@ set nojoinspaces
 "                       USABILITY
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" If compiled with ++wildmenu, enable easier command-line completion 
+" If compiled with ++wildmenu, enable easier command-line completion
+" Kudos to github user askedrelic for good wildignore settings.
+
 if exists("&wildmenu")
+
     set wildmenu
+
+    set wildmode=longest,list
+    set wildignore+=*.DS_Store " OSX metadata
+    set wildignore+=*.aux,*.out,*.toc " LaTeX intermediate files
+    set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg,*.tiff " binary images
+    set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
+    set wildignore+=*.pyc " Python byte code
+    set wildignore+=*.spl " compiled spelling word lists
+    set wildignore+=*.sw? " Vim swap files
 endif
 
 " (i) Enable visualbell instead of beeping. 
