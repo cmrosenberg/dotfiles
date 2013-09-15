@@ -62,7 +62,7 @@ set autoread
 set nomodeline
 
 " I have only experienced the problem solved by this when explicitly setting
-" backspace=0 or backspace=1, but to ensure I always get the expected behavoir
+" backspace=0 or backspace=1, but to ensure I always get the expected behavior
 " I'm setting it here
 set backspace=indent,eol,start
 
@@ -72,7 +72,7 @@ set backspace=indent,eol,start
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " If the feature is available,mark any line that exceeds 80 columns with a red
-" strikethrough on the 81st column. Kudos to Damian Conway for this. 
+" strikethrough on the 81st column. Kudos to Damian Conway for this.
 " Availablie if vim version >= 7.3.
 if exists("&colorcolumn")
     highlight ColorColumn ctermbg=red
@@ -83,7 +83,7 @@ endif
 " Have special characters showing tabs, trailing whitespace and non-breaking
 " spaces. The extends and preceeds
 " come into play when wrap is off and a line continues past the end of the
-" screen. 
+" screen.
 if exists("&list")
     set list
     set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:•,nbsp:+
@@ -125,9 +125,9 @@ set scrolloff=3
 " Insert a single space after a '.', '?' and 'I' when joining lines
 set nojoinspaces
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       USABILITY
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " If compiled with ++wildmenu, enable easier command-line completion
 " Kudos to github user askedrelic for good wildignore settings.
