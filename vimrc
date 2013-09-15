@@ -78,7 +78,8 @@ if exists("&colorcolumn")
 endif
 
 
-" Have special characters showing tabs. The extends and preceeds
+" Have special characters showing tabs, trailing whitespace and non-breaking
+" spaces. The extends and preceeds
 " come into play when wrap is off and a line continues past the end of the
 " screen. 
 if exists("&list")
