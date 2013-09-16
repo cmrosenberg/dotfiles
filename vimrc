@@ -100,6 +100,9 @@ set tabstop=4
 " amount of spaces
 set smarttab
 
+" Round indent to mulitple of 'shiftwidth'
+set shiftround
+
 " If no filetype specific indentation is found, indent according to first line
 set autoindent
 
