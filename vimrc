@@ -139,7 +139,8 @@ set scrolloff=3
 "of at least five columns.
 set sidescrolloff=5
 
-" Insert a single space after a '.', '?' and 'I' when joining lines
+" Insert a single space rather than two after a '.', '?' and 'I' when " joining
+" lines
 set nojoinspaces
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
