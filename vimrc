@@ -154,6 +154,8 @@ if exists("&wildmenu")
 
     set wildmenu
 
+    "First complete till longest common string. If more than one match, list
+    "all matches."
     set wildmode=longest,list
     set wildignore+=*.DS_Store " OSX metadata
     set wildignore+=*.aux,*.out,*.toc " LaTeX intermediate files
