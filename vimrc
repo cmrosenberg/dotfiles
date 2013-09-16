@@ -129,6 +129,10 @@ set showmode
 " Padd the cursor with some lines to give the current line context
 set scrolloff=3
 
+"If browsing a line vertically: let there be a padding around the cursor
+"of at least five columns.
+set sidescrolloff=5
+
 " Insert a single space after a '.', '?' and 'I' when joining lines
 set nojoinspaces
 
