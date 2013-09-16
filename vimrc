@@ -92,14 +92,15 @@ if exists("&list")
     set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:•,nbsp:+
 endif
 
-" Convert tabs into spaces
-set expandtab
 
 " A shift (using '<' or '>' in normal mode) should be 4 columns wide
 set shiftwidth=4
 
 " Round indent to mulitple of 'shiftwidth'
 set shiftround
+
+" Convert tabs into spaces
+set expandtab
 
 " A tab should be 4 columns wide
 set tabstop=4
