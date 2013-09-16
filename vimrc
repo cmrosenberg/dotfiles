@@ -56,7 +56,10 @@ set nobackup
 set noswapfile
 
 " Tell Vim to automaticaly read in changes happening to the file from outside
-set autoread 
+set autoread
+
+" Don't override newline settings if a file uses mac-style newlines
+set fileformats+=mac
 
 " Until I come up with some genius (ie. stupid) ways of using these...
 set nomodeline
