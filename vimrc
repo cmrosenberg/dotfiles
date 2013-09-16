@@ -119,9 +119,11 @@ else
     set number
 endif
 
-" Enable syntax highlighting if either (i) or (ii) (or both):
+" Turn syntax on if either (i) or (ii) (or both):
 " (i) The terminal has more than two colors.
 " (ii) Vim is run from a gui.
+" NOTE: I chose 'syntax on' rather than 'syntax enable' because I
+" don't mind vim overwriting colors set by the environment.
 if &t_Co > 2 || has("gui_running")
     syntax on
 endif
