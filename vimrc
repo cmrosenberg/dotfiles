@@ -96,6 +96,10 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 
+" Insert <shiftwidth> amount of blanks. On a backspace, delete <shiftwidth>
+" amount of spaces
+set smarttab
+
 " If no filetype specific indentation is found, indent according to first line
 set autoindent
 
@@ -145,6 +149,11 @@ if exists("&wildmenu")
     set wildignore+=*.spl " compiled spelling word lists
     set wildignore+=*.sw? " Vim swap files
 endif
+
+" Stop vim from scanning included files, ie. files mentioned in the code
+" itself. Although useful when few imports are used, the -i flag can make
+" autompleting with C-n and C-p slow.
+set complete-=i
 
 " (i) Enable visualbell instead of beeping. 
 " (ii) Set type of visualbell to no type - ie. disable all bells completely.
