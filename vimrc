@@ -145,6 +145,10 @@ set sidescrolloff=5
 " lines
 set nojoinspaces
 
+" Include as much as possible of the last line of the file - do not simply
+" relace it with '@'-lines
+set display+=lastline
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       USABILITY
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
