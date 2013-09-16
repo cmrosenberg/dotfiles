@@ -28,17 +28,17 @@ set nocompatible
 filetype plugin indent on
 
 "If Vim is compiled with multibyte character support (e.g. utf-8):
-" (i) 	Make vim use utf-8 internally.
+" (i)   Make vim use utf-8 internally.
 " (ii)  When opening a file, first check for utf BOMs and enable a proper
-" 	unicode interpretation if that is the case. If the utf-8 related
-" 	options fail, attempt the default settings from the environment. 
-" 	If this also fails, use latin1, which is guaranteed to work 
-" 	but might cause loss of information.
+"   unicode interpretation if that is the case. If the utf-8 related
+"   options fail, attempt the default settings from the environment. 
+"   If this also fails, use latin1, which is guaranteed to work 
+"   but might cause loss of information.
 " (iii) Make vim assume a file is encoded in utf-8 unless explicitly
-" 	specified. Consequently, new files in utf-8. 
-" 	Since the option is set with 'setglobal', we can still alter the 
-" 	fileencoding of the local buffer using 'set fileencoding=foo' if
-" 	so desired.
+"   specified. Consequently, new files in utf-8. 
+"   Since the option is set with 'setglobal', we can still alter the 
+"   fileencoding of the local buffer using 'set fileencoding=foo' if
+"   so desired.
 if has("multi_byte")
     set encoding=utf-8
     set fileencodings=ucs-bom,utf-8,default,latin1
@@ -105,10 +105,9 @@ set expandtab
 " A tab should be 4 columns wide
 set tabstop=4
 
-" Insert <shiftwidth> amount of blanks. On a backspace, delete <shiftwidth>
-" amount of spaces
+" Insert <shiftwidth> amount of blanks when hitting tab at the start of a
+" newline. On a backspace, delete <shiftwidth> " amount of spaces
 set smarttab
-
 
 " If no filetype specific indentation is found, indent according to first line
 set autoindent
