@@ -40,7 +40,7 @@ filetype plugin indent on
 " 	fileencoding of the local buffer using 'set fileencoding=foo' if
 " 	so desired.
 if has("multi_byte")
-    set encoding=utf-8  
+    set encoding=utf-8
     set fileencodings=ucs-bom,utf-8,default,latin1
     setglobal fileencoding=utf-8
 endif
@@ -95,16 +95,19 @@ endif
 " Convert tabs into spaces
 set expandtab
 
-" Sets two-space indentation
+" A shift (using '<' or '>' in normal mode) should be 4 columns wide
 set shiftwidth=4
+
+" Round indent to mulitple of 'shiftwidth'
+set shiftround
+
+" A tab should be 4 columns wide
 set tabstop=4
 
 " Insert <shiftwidth> amount of blanks. On a backspace, delete <shiftwidth>
 " amount of spaces
 set smarttab
 
-" Round indent to mulitple of 'shiftwidth'
-set shiftround
 
 " If no filetype specific indentation is found, indent according to first line
 set autoindent
