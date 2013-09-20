@@ -1,3 +1,6 @@
+" Disable (strict) vi compatibility.
+set nocompatible
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                    PATHOGEN
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -20,8 +23,6 @@ endif
 "                    GENERAL OPTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Disable (strict) vi compatibility.
-set nocompatible
 
 " (i) Detect filetype
 " (ii) use detected filetype to inform behaviour of plugins and indentation
