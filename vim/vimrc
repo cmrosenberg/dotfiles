@@ -113,12 +113,9 @@ set smarttab
 " If no filetype specific indentation is found, indent according to first line
 set autoindent
 
-"Enable realtive file numbering if feature is enabled.
-if exists('&relativenumber')
-    set relativenumber
-else
-    set number
-endif
+"Set line numbering. I tried the relative line-number thing, but found it noto
+"my liking.
+set number
 
 " Turn syntax on if either (i) or (ii) (or both):
 " (i) The terminal has more than two colors.
