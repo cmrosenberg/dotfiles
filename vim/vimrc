@@ -147,6 +147,13 @@ set nojoinspaces
 " relace it with '@'-lines
 set display+=lastline
 
+
+" Highlight the line the cursor is located on (warning: pleasantness varies
+" enormously between colorschemes!)
+if exists("&cursorline")
+    set cursorline
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       USABILITY
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
