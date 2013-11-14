@@ -154,6 +154,12 @@ if exists("&cursorline")
     set cursorline
 endif
 
+" Set title of the terminal window to the name of the file currently being
+" edited.
+if exists("&title")
+    set title
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       USABILITY
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
