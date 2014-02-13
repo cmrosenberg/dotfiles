@@ -9,7 +9,7 @@ set nocompatible
 "Read ex commands from the file, and source these commands, that is, include
 "them in the vim configuration. If this file does not exist, a silent error
 "occurs.
-runtime! autoload/pathogen.vim
+runtime! bundle/vim-pathogen/autoload/pathogen.vim
 
 "This assumes that you keep your bundles in  ~/.vim/bundle. If this is not
 " the case, issue
