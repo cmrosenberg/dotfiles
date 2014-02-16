@@ -192,11 +192,6 @@ set complete-=i
 " (ii) Set type of visualbell to no type - ie. disable all bells completely.
 set visualbell t_vb=
 
-" If compiled with +cmdline_info:
-" Make vim print the command I'm currently typing in
-if exists("&showcmd")
-    set showcmd
-endif
 
 " Use case insensitive search, except when search string uses capital letters
 set ignorecase
@@ -264,6 +259,9 @@ iabbr <silent> cb {}<Left><C-R>=Eatchar('\s')<CR>
 
 "Insert square braces, set cursor between braces
 iabbr <silent> sb []<Left><C-R>=Eatchar('\s')<CR>
+
+"Insert square braces, set cursor between braces
+iabbr <silent> pb ()<Left><C-R>=Eatchar('\s')<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       EXTENSIONS
