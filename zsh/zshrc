@@ -7,10 +7,45 @@ unsetopt beep nomatch
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
+
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' matcher-list ''
 zstyle :compinstall filename '/Users/cmr/.zshrc'
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Import aliases shared by bash and zsh
 source $HOME/.aliases
+
+source $HOME/.secrets
+
+export PATH=/opt/local/bin:$PATH
+
+# Directory-related
+
+# Make cd automatically push the directory onto the directory stack
+setopt autopushd
+setopt pushd_silent #Don't print the directory stack when pushing
+
+# Jobs-related
+# Print job info in long format by default (shows PID etc.)
+setopt longlistjobs
+
+# Globbing
+setopt extendedglob
+setopt noglobdots
+
+# Spelling corrections and safety nets
+setopt correct
+setopt rm_star_wait
+
+
+# keybindings: enable incremental backward search without
+# having to enable emacs mode
+bindkey "^R" history-incremental-search-backward
+
+# Prompt
+PROMPT="@%B%m%b %~ %Bλ%b "
