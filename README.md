@@ -15,6 +15,9 @@ additional plugins, run [bootstrap-ideconfig.sh](./vim/bootstrap-ideconfig.sh)
 and symlink [ide.vim](vim/ide.vim) as your vimrc-file.
 [ide.vim](./vim/ide.vim) includes [core.vim](./vim/core.vim).
 
+<em>Until I level up my scripting fu, you have to run [bootstrap-ideconfig.sh](./vim/bootstrap-ideconfig.sh)
+from the directory where the script itself resides (where you cloned it into).</em>
+
 ### Credits
 
 * [Tim Pope&apos;s vim-sensible repo](https://github.com/tpope/vim-sensible)
