@@ -15,20 +15,12 @@ additional plugins, run [bootstrap-ideconfig.sh](./vim/bootstrap-ideconfig.sh)
 and symlink [ide.vim](vim/ide.vim) as your vimrc-file.
 [ide.vim](./vim/ide.vim) includes [core.vim](./vim/core.vim).
 
-[Tim Pope&apos;s vim-sensible](https://github.com/tpope/vim-sensible).
-
-
-### License
-[BSD 2-Clause license](http://opensource.org/licenses/BSD-2-Clause) See LICENSE.TXT.
-
-### Sources of inspiration
-
-#### Vim
+### Credits
 
 * [Tim Pope&apos;s vim-sensible repo](https://github.com/tpope/vim-sensible)
- 
- #### General
 
- * [Hashrocket DotMatrix](https://github.com/hashrocket/dotmatrix)
- * [Square: Maximum Awesome](https://github.com/square/maximum-awesome/)
+### License
 
+See each inidivudal script and plugin for details. Unless otherwise stated,
+all code is licensed according to the MIT-license:
+See [LICENSE.txt](./LICENSE.txt).
