@@ -175,6 +175,14 @@ set hlsearch
 " If vim prints an error message, don't immediately close it.
 set debug=msg
 
+" Use persistent undo. Kudos to Ethan Schoonover (@altercation on Github)
+" for this.
+if has('persistent_undo')
+  silent !mkdir ~/.vim/backups > /dev/null 2>&1
+  set undodir=~/.vim/backups
+  set undofile
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       MAPPINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
