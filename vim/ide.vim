@@ -40,15 +40,6 @@ autocmd FileType tex let b:dispatch = 'pdflatex % -file-line-error'
 autocmd FileType tex set commentstring=\%%s
 runtime! ftplugin/man.vim
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       EXTENSIONS
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Extend this setup with local configurations (colorscheme etc)
-if filereadable(expand("~/.vimrc.local"))
-    source ~/.vimrc.local
-endif
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       CORE CONFIGURATION
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -265,3 +265,11 @@ inoremap jk <esc>
 :nnoremap <leader>t o<Esc>"=strftime("%Y, Week %V, %A %B %d at %X %Z: ")<C-M>pA
 :nnoremap <leader>T O<Esc>"=strftime("%Y, Week %V, %A %B %d at %X %Z: ")<C-M>pA
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       EXTENSIONS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Extend this setup with local configurations (colorscheme etc)
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
