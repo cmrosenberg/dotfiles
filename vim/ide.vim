@@ -23,6 +23,7 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-commentary'
 
 Plugin 'pangloss/vim-javascript'
+
 Plugin 'scrooloose/syntastic'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -41,6 +42,15 @@ runtime! ftplugin/man.vim
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       EXTENSIONS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Extend this setup with local configurations (colorscheme etc)
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       CORE CONFIGURATION
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 source core.vim
