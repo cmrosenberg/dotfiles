@@ -1,11 +1,34 @@
 " These are the essential settings I need. It serves as a standalone, minimal
 " configuration.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                   ENCODING
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"If Vim is compiled with multibyte character support (e.g. utf-8):
+" (i)   Make vim use utf-8 internally.
+" (ii)  When opening a file, first check for utf BOMs and enable a proper
+"   unicode interpretation if that is the case. If the utf-8 related
+"   options fail, attempt the default settings from the environment.
+"   If this also fails, use latin1, which is guaranteed to work
+"   but might cause loss of information.
+" (iii) Make vim assume a file is encoded in utf-8 unless explicitly
+"   specified. Consequently, new files in utf-8. 
+"   Since the option is set with 'setglobal', we can still alter the
+"   fileencoding of the local buffer using 'set fileencoding=foo' if
+"   so desired.
+
+if has("multi_byte")
+    set encoding=utf-8
+    set fileencodings=ucs-bom,utf-8,default,latin1
+    setglobal fileencoding=utf-8
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                   SETTINGS FROM SENSIBLE.VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Attribution:  Tim Pope (https://github.com/tpope/vim-sensible)
 " Sensible.vim is licensed under the same terms as vim. See :help license
+" This is pretty much a verbatim compy of sensible.vim - where there are
+" deviations I've commented on that.
 
 if exists('g:loaded_sensible') || &compatible
   finish
@@ -36,12 +59,14 @@ if maparg('<C-L>', 'n') ==# ''
 endif
 
 set laststatus=2
+
 set ruler
 set showcmd
+
 set wildmenu
 
 if !&scrolloff
-  set scrolloff=1
+  set scrolloff=3 "Tim Pope sets this to 1, I prefer 3
 endif
 
 if !&sidescrolloff
@@ -50,6 +75,9 @@ endif
 
 set display+=lastline
 
+
+" This option is probably redundant due to how I
+" set encodings at the top of the file.
 if &encoding ==# 'latin1' && has('gui_running')
   set encoding=utf-8
 endif
@@ -106,6 +134,13 @@ set hidden
 " (ii) Set type of visualbell to no type - ie. disable all bells completely.
 set visualbell t_vb=
 
+"TODO: Create functions so that encoding and file format are only displayed
+"if they deviate from 'utf-8' and 'unix' respectively.
+set statusline=%<%f\ \| "Show filename relative to working directory
+set statusline+=\ %{''.(&fenc!=''?&fenc:&enc).''}\ \|      "Encoding
+set statusline+=\ %{&ff}\                              "FileFormat (dos/unix..)
+set statusline+=\%h%m%r%=%-14.(%l,%c%V%)\ %P "Rest of the standard options
+
 " If the feature is available,mark any line that exceeds 80 columns with a red
 " strikethrough on the 81st column. Kudos to Damian Conway for this.
 " Availablie if vim version >= 7.3.
@@ -129,9 +164,6 @@ set fileformats+=mac
 
 " Show the mode I'm currently in
 set showmode
-
-" Padd the cursor with some lines to give the current line context
-set scrolloff=3
 
 "If browsing a line vertically: let there be a padding around the cursor
 "of at least five columns.
@@ -183,6 +215,20 @@ if has('persistent_undo')
   set undofile
 endif
 
+set shiftwidth=4
+set expandtab
+set smarttab
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       FILETYPE-SPECIFIC SETTINGS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Yeah, having these settings here instead of in the .vim/ftplugin directory
+" is controversial, but I opted for this.
+
+au BufEnter *.txt   set tw=79 | set formatoptions+=t
+
+au BufEnter *.js   set shiftwidth=2
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       MAPPINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -218,3 +264,4 @@ inoremap jk <esc>
 " Extremely crude mappings for timestamps.
 :nnoremap <leader>t o<Esc>"=strftime("%Y, Week %V, %A %B %d at %X %Z: ")<C-M>pA
 :nnoremap <leader>T O<Esc>"=strftime("%Y, Week %V, %A %B %d at %X %Z: ")<C-M>pA
+
