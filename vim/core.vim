@@ -219,6 +219,9 @@ set shiftwidth=4
 set expandtab
 set smarttab
 
+set foldmethod=syntax
+set foldenable
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       FILETYPE-SPECIFIC SETTINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
