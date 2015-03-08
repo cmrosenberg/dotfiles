@@ -21,6 +21,8 @@ from the directory where the script itself resides (where you cloned it into).</
 ### Credits
 
 * [Tim Pope&apos;s vim-sensible repo](https://github.com/tpope/vim-sensible)
+* [seebi's tmux-colors-solarized repo](https://github.com/seebi/tmux-colors-solarized). I include some
+colors from this repo.
 
 ### License
 
