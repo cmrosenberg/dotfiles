@@ -1,0 +1,61 @@
+OS X: General Installation Notes
+--------------------------------
+
+When installing a vanilla OS X installation, the following is
+nice to keep in mind.
+
+General Applications that need to be installed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* http://iterm2.com/[iTerm 2]
+* https://www.virtualbox.org/[Virtualbox]
+* https://www.vagrantup.com/[Vagrant]
+
+Homebrew applications that need to be installed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It should be obvious, but note that the following packages
+have a variety of dependencies that also will be installed.
+
+* `ack`
+* `binutils`
+* `cloc`
+* `colordiff`
+* `coreutils`
+* `cscope`
+* `curl`
+* `findutils`
+* `git` (use the git in XCode Toolchain to bootstrap homebrew)
+* `macvim` (alias `vim` to the vim-binary held within for a fresh vim)
+* `node`
+* `pwgen`
+* `reattach-to-user-namespace` (a hack that makes `tmux` work properly)
+* `tig`
+* `tmux`
+* `wget`
+* `zsh`
+
+
+Non-dev stuff you probably want
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* A decent browser or three that isn't Safari.
+* https://www.android.com/filetransfer/[Android File Transfer]
+* http://anti-social.cc/[Anti-Social]
+* https://www.bombich.com/[Carbon Copy Cloner]
+* https://kapeli.com/dash[Dash]
+* http://docs.racket-lang.org/drracket/[DrRacket]
+* https://justgetflux.com/[f.lux]
+* http://www.guitar-pro.com/en/index.php[Guitar Pro 6]
+* http://www.gog.com/game/heroes_of_might_and_magic_3_complete_edition[Heroes 3 Complete (legendary game)]
+* https://www.libreoffice.org/download/libreoffice-fresh/[LibreOffice]
+* https://minecraft.net/[Minecraft]
+* http://store.steampowered.com/about/[Steam]
+* http://pages.uoregon.edu/koch/texshop/[TexShop], or some other LaTeX suite.
+* http://www.videolan.org/[VLC]
+
+
+Misc
+~~~~
+
+* Be sure to grab the https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized[Solarized Theme] for iTerm.
