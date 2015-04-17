@@ -1,0 +1,85 @@
+Linux: General Installation Notes
+--------------------------------
+
+When installing a vanilla linux setup, the following is
+nice to keep in mind.
+
+Developer Applications that need to be installed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* https://www.virtualbox.org/[Virtualbox]
+* https://www.vagrantup.com/[Vagrant]
+
+Developer Utilities that need to be installed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* `ack` (This is called `ack-grep` on Ubuntu and Debian)
+* `cloc`
+* `colordiff`
+* `cscope`
+* `curl`
+* `git`
+* `gvim` (On Ubuntu, I use `vim-gtk`)
+* `pwgen`
+* `tig`
+* `tmux`
+* `zsh`
+
+Essentials that are probably already installed
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* `binutils`
+* `coreutils`
+* `findutils`
+* `wget`
+* `vim`
+
+Other things you will probably need
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* A pass:[C++] compiler. On Ubuntu, you can get this by installing pass:[g++].
+This will install the GCC version.
+
+* Clang. Clang is nice. On Ubuntu, I'd install `clang`.
+
+[source, shell]
+.oneliner-for-ubuntu
+----
+apt-get ack-grep cloc colordiff cscope curl g++ git install pwgen tig tmux vim vim-gtk zsh
+----
+
+Bleeding Edge technology
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+It might be a good idea to install the following
+programs from dedicated, official repositories:
+
+* `node`
+* `postgresql`
+
+
+
+
+Non-dev stuff you probably want
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* http://docs.racket-lang.org/drracket/[DrRacket]
+* https://justgetflux.com/[f.lux]
+* http://www.guitar-pro.com/en/index.php[Guitar Pro 6]
+* http://www.gog.com/game/heroes_of_might_and_magic_3_complete_edition[Heroes 3 Complete (legendary game)]
+* https://www.libreoffice.org/download/libreoffice-fresh/[LibreOffice]
+* https://minecraft.net/[Minecraft]
+* http://www.videolan.org/[VLC]
+
+Misc
+~~~~
+
+* Be sure to grab the Solarized Theme for your terminal emulator
+of choice. https://github.com/Anthony25/gnome-terminal-colors-solarized[Solarized for Gnome Terminal]
+* If you're running Gnome (or Unity with the `libgnome2-bin` package
+on Ubuntu or similar), I recommend creating the following alias:
+
+    alias gno=gnome-open
+
+In this manner, you can open directories and files directly from the
+command line, just like with the `open` command on OS X.
