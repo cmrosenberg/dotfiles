@@ -23,6 +23,8 @@ source $HOME/.aliases
 source $HOME/.secrets
 
 export PATH=/opt/local/bin:$PATH
+export EDITOR=vim
+export LC_CTYPE="en_US.UTF-8"
 
 # Directory-related
 
