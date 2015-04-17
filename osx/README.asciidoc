@@ -36,8 +36,21 @@ have a variety of dependencies that also will be installed.
 * `zsh`
 
 
-Non-dev stuff you probably want
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+npm utilities that are nice to have
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* `jsonlint`
+* `eslint`
+
+
+ruby gems that are nice to have
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* `asciidoctor`
+
+
+Other  stuff you probably want
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * A decent browser or three that isn't Safari.
 * https://www.android.com/filetransfer/[Android File Transfer]
@@ -50,16 +63,26 @@ Non-dev stuff you probably want
 * http://www.gog.com/game/heroes_of_might_and_magic_3_complete_edition[Heroes 3 Complete (legendary game)]
 * https://www.libreoffice.org/download/libreoffice-fresh/[LibreOffice]
 * https://minecraft.net/[Minecraft]
+* https://www.spotify.com/us/[Spotify]
 * http://store.steampowered.com/about/[Steam]
 * http://pages.uoregon.edu/koch/texshop/[TexShop], or some other LaTeX suite.
 * http://www.videolan.org/[VLC]
 
 
+Configuring iTerm
+~~~~~~~~~~~~~~~~~
+
+* Be sure to grab the https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized[Solarized Theme] for iTerm.
+* I've had some problems with locale discrepancies between OS X and Linux.
+As of today, my approach to this problem is to turn off
+"Set locale variables automatically" in iTerm > Preferences > Terminal and set
+`export LC_CTYPE="en_US.UTF-8"` in my `.zshrc`.
+
+
 Misc
 ~~~~
 
-* Be sure to grab the https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized[Solarized Theme] for iTerm.
 * Also, get http://www.levien.com/type/myfonts/inconsolata.html[Inconsolata], a very nice font for programmers.
 * I recommend setting the following aliases:
-    ** `alias ls="ls -G"`
+    ** `alias ls="ls -G"` (You probably don't want to set this on Linux!)
     ** `alias diff='colordiff'`
