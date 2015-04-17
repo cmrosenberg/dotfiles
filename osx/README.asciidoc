@@ -4,12 +4,14 @@ OS X: General Installation Notes
 When installing a vanilla OS X installation, the following is
 nice to keep in mind.
 
+
 General Applications that need to be installed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * http://iterm2.com/[iTerm 2]
 * https://www.virtualbox.org/[Virtualbox]
 * https://www.vagrantup.com/[Vagrant]
+
 
 Homebrew applications that need to be installed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
