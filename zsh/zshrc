@@ -18,9 +18,13 @@ compinit
 # End of lines added by compinstall
 
 # Import aliases shared by bash and zsh
-source $HOME/.aliases
+if stat ~/.aliases 2>1 1>/dev/null; then
+    source $HOME/.aliases
+fi
 
-source $HOME/.secrets
+if stat ~/.secrets 2>1 1>/dev/null; then
+    source $HOME/.secrets
+fi
 
 export PATH=/opt/local/bin:$PATH
 export EDITOR=vim
