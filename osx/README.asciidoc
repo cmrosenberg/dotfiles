@@ -59,6 +59,7 @@ Misc
 ~~~~
 
 * Be sure to grab the https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized[Solarized Theme] for iTerm.
+* Also, get http://www.levien.com/type/myfonts/inconsolata.html[Inconsolata], a very nice font for programmers.
 * I recommend setting the following aliases:
     ** `alias ls="ls -G"`
     ** `alias diff='colordiff'`
