@@ -47,6 +47,7 @@ setopt noglobdots
 # Spelling corrections and safety nets
 setopt correct
 setopt rm_star_wait
+setopt ignoreeof
 
 
 # keybindings: enable incremental backward search without
