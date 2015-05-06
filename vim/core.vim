@@ -261,6 +261,9 @@ nnoremap <leader><cr> <c-]>
 nnoremap H 0
 nnoremap L $
 
+" Switch to auxillary buffer quickly
+nnoremap <leader>b :b#<cr>
+
 "Map jk to Escape for easier mode switching"
 inoremap jk <esc>
 
