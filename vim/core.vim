@@ -271,6 +271,17 @@ inoremap jk <esc>
 :nnoremap <leader>t o<Esc>"=strftime("%Y, Week %V, %A %B %d at %X %Z: ")<C-M>pA
 :nnoremap <leader>T O<Esc>"=strftime("%Y, Week %V, %A %B %d at %X %Z: ")<C-M>pA
 
+"Cscope niceness
+augroup filetype_c
+    autocmd!
+    autocmd FileType c :cs add cscope.out
+augroup END
+
+nnoremap  <leader>fc :cs find c <cword><CR>
+nnoremap  <leader>fd :cs find d <cword><CR>
+nnoremap  <leader>fg :cs find g <cword><CR>
+nnoremap  <leader>fi :cs find i <cword><CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       EXTENSIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
