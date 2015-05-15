@@ -28,7 +28,8 @@ have a variety of dependencies that also will be installed.
 * `curl`
 * `findutils`
 * `git` (use the git in XCode Toolchain to bootstrap homebrew)
-* `macvim` (alias `vim` to the vim-binary held within for a fresh vim)
+* `vim`
+* `macvim`
 * `node`
 * `pwgen`
 * `reattach-to-user-namespace` (a hack that makes `tmux` work properly)
@@ -36,7 +37,7 @@ have a variety of dependencies that also will be installed.
 * `tmux`
 * `wget`
 * `zsh`
-
+* `xz`
 
 npm utilities that are nice to have
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,7 +52,7 @@ ruby gems that are nice to have
 * `asciidoctor`
 
 
-Other  stuff you probably want
+Other stuff you probably want
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * A decent browser or three that isn't Safari.
@@ -69,6 +70,7 @@ Other  stuff you probably want
 * http://store.steampowered.com/about/[Steam]
 * http://pages.uoregon.edu/koch/texshop/[TexShop], or some other LaTeX suite.
 * http://www.videolan.org/[VLC]
+* http://xquartz.macosforge.org/landing/[XQuartz]
 
 
 Configuring iTerm
@@ -84,7 +86,26 @@ As of today, my approach to this problem is to turn off
 Misc
 ~~~~
 
-* Also, get http://www.levien.com/type/myfonts/inconsolata.html[Inconsolata], a very nice font for programmers.
+* One of the first things I like to do is to "Automatically hide
+and show the dock".
+
+* I also like to throw away all the OSX apps from the Dock.
+I never use them.
+
+* I've learned the hard way that you should always install
+all of XCode, not just the command line utilities.
+
+* Another thing I dislike about Apple's standard setup is that
+it is so hard to find the home folder in Finder. I fix this by opening
+a terminal, going to the parent of ~, issuing ´open .´ and then dragging
+the icon for the home-filder into the left-side margin.
+
+* It's worth spending some time tweaking Finder. I like to set it
+to always search the current directory, and remove the tags: I never
+use them.
+
+* Make sure to get http://www.levien.com/type/myfonts/inconsolata.html[Inconsolata], a very nice font for programmers.
+
 * I recommend setting the following aliases:
     ** `alias ls="ls -G"` (You probably don't want to set this on Linux!)
     ** `alias diff='colordiff'`
