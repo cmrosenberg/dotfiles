@@ -97,8 +97,8 @@ all of XCode, not just the command line utilities.
 
 * Another thing I dislike about Apple's standard setup is that
 it is so hard to find the home folder in Finder. I fix this by opening
-a terminal, going to the parent of ~, issuing ´open .´ and then dragging
-the icon for the home-filder into the left-side margin.
+a terminal, going to the parent of ~, issuing `open .` and then dragging
+the icon for the home-folder into the left-side margin of the Finder window.
 
 * It's worth spending some time tweaking Finder. I like to set it
 to always search the current directory, and remove the tags: I never
