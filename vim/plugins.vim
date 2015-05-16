@@ -16,6 +16,7 @@ filetype plugin indent on
 Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'jonathanfilip/vim-lucius'
 
 "Awesomeness from Tim Pope
 Plugin 'tpope/vim-fugitive'
@@ -39,7 +40,3 @@ autocmd FileType tex let b:dispatch = 'pdflatex % -file-line-error'
 
 autocmd FileType tex set commentstring=\%%s
 runtime! ftplugin/man.vim
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       CORE CONFIGURATION
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

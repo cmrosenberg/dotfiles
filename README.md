@@ -9,14 +9,15 @@ Each program has its own folder of configuration files. In most cases it is
 sufficient to simply make a symbolic link from your home directory to what
 you are interested in.
 
-For Vim, you can either symlink [core.vim](./vim/core.vim), which gives you a
-minimal but good configuration. If you want a more IDE-like experience with
-additional plugins, run [bootstrap-ideconfig.sh](./vim/bootstrap-ideconfig.sh)
-and symlink [ide.vim](vim/ide.vim) as your vimrc-file.
-[ide.vim](./vim/ide.vim) includes [core.vim](./vim/core.vim).
+#### Vim
 
-<em>Until I level up my scripting fu, you have to run [bootstrap-ideconfig.sh](./vim/bootstrap-ideconfig.sh) and [set-os-settings.sh](./tmux/set-os-settings.sh)
-from the directory where the script itself resides (where you cloned it into).</em>
+For a basic configuration, simply symlink [vimrc.vim](./vim/vimrc.vim).
+
+If you want the plugins as well, run [bootstrap-plugins.sh](./vim/bootstrap-plugins.sh)
+from the directory the script is located (requires git). This will install
+[Vundle](https://github.com/gmarik/Vundle.vim), fetch and install all the plugins
+described and configured in [plugins.vim](./vim/plugins.vim) and symlink
+[plugins.vim](./vim/plugins.vim) to <code>~/.vimrc.plugins</code>.
 
 ### Credits
 

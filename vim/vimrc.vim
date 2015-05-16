@@ -1,5 +1,14 @@
 " These are the essential settings I need. It serves as a standalone, minimal
 " configuration.
+
+" If we have plugins, they need to be initialized before any other settings
+" are applied. You can safely remove this if-block if you only want to use
+" the core configuration.
+
+if filereadable(expand("~/.vimrc.plugins"))
+    source ~/.vimrc.plugins
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                   ENCODING
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
