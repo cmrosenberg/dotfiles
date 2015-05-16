@@ -17,6 +17,7 @@ Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jonathanfilip/vim-lucius'
+Plugin 'vim-scripts/xoria256.vim'
 
 "Awesomeness from Tim Pope
 Plugin 'tpope/vim-fugitive'
