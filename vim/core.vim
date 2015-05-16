@@ -282,6 +282,9 @@ nnoremap  <leader>fd :cs find d <cword><CR>
 nnoremap  <leader>fg :cs find g <cword><CR>
 nnoremap  <leader>fi :cs find i <cword><CR>
 
+"Use space to open and close folds
+nnoremap <Space> za
+vnoremap <Space> za
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       EXTENSIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
