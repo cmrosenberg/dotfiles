@@ -92,6 +92,10 @@ and show the dock".
 * I also like to throw away all the OSX apps from the Dock.
 I never use them.
 
+* If you have Yosemite, make sure to go to System Preferences > Mission Control
+and deselect "Displays have separate spaces". This makes spaces behave like
+in Maverics.
+
 * I've learned the hard way that you should always install
 all of XCode, not just the command line utilities.
 
