@@ -229,7 +229,10 @@ set expandtab
 set smarttab
 
 set foldmethod=syntax
-set foldenable
+set nofoldenable
+
+" This prevents vim from choking on very large lines
+set synmaxcol=120
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       FILETYPE-SPECIFIC SETTINGS
@@ -238,7 +241,7 @@ set foldenable
 " is controversial, but I opted for this.
 
 au BufEnter *.txt   set tw=79 | set formatoptions+=t
-
+au BufEnter *.tex   set tw=79 | set formatoptions+=t
 au BufEnter *.js   set shiftwidth=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -246,22 +249,6 @@ au BufEnter *.js   set shiftwidth=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 let maplocalleader = ";"
-
-" Make it easier to edit and source .vimrc on the fly
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" Make it easier to edit and source the local configurations on the fly
-nnoremap <leader>el :vsplit ~/.vimrc.local<cr>
-nnoremap <leader>sl :source ~/.vimrc.local<cr>
-
-" Make it easier to close windows and buffers
-nnoremap <leader>c :bd<cr>
-nnoremap <localleader>c :close<cr>
-nnoremap <leader>C :bd!<cr>
-
-"Make it easier to open a new window
-nnoremap <leader>n :new<cr>
 
 "Make it easier to follow links when reading help
 nnoremap <leader><cr> <c-]>
@@ -294,6 +281,17 @@ nnoremap  <leader>fi :cs find i <cword><CR>
 "Use space to open and close folds
 nnoremap <Space> za
 vnoremap <Space> za
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       SPELLING
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if has('spell')
+    set spelllang=en_us
+    nmap <silent> <leader>s :setlocal spell!<CR>
+    nnoremap <leader>c 1z=
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       EXTENSIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
