@@ -18,15 +18,15 @@ compinit
 # End of lines added by compinstall
 
 # Import aliases shared by bash and zsh
-if stat ~/.aliases 2>1 1>/dev/null; then
+if stat ~/.aliases &>/dev/null; then
     source $HOME/.aliases
 fi
 
-if stat ~/.secrets 2>1 1>/dev/null; then
+if stat ~/.secrets &>/dev/null; then
     source $HOME/.secrets
 fi
 
-export PATH=/opt/local/bin:$PATH
+export PATH=~/builds/:/opt/local/bin:$PATH
 export EDITOR=vim
 export LC_CTYPE="en_US.UTF-8"
 
