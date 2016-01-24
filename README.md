@@ -1,3 +1,13 @@
+# DEPRECATED
+
+For my current setup, see:
+- https://github.com/cmrosenberg/config.gitscm
+- https://github.com/cmrosenberg/config.tmux
+- https://github.com/cmrosenberg/config.vim
+- https://github.com/cmrosenberg/config.zsh
+- https://github.com/cmrosenberg/setup
+
+
 ### About
 
 This repo hosts my various dotfiles. I intend to keep things simple, unobtrusive,
